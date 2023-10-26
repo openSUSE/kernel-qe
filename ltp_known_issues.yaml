@@ -6,9 +6,9 @@ syscalls:
       retval: ^1$
       message: Test bug. Reported to upstream LTP. bsc#3541571
     fanotify14:
-    - product: opensuse:Tumbleweed|opensuse:15.4
+    - product: opensuse:15\.[45]
       retval: ^1$
-      message: Waiting for stable kernel to get backport of 69562eb0bd3e ("fanotify disallow mount/sb marks on kernel internal pseudo fs") bsc#1213486
+      message: WONTFIX on older than kernel 6.4 ("fanotify disallow mount/sb marks on kernel internal pseudo fs") bsc#1213486
       bugzilla: 1213486
     process_madvise01:
     - product: opensuse:(Tumbleweed|15\.[4-6])
