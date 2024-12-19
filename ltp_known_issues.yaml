@@ -42,6 +42,66 @@ net.nfs:
     - product: opensuse:(Tumbleweed|15\.[4-6])
       message: nfs_flock fails on NFSv3. Upstream bug, patches for kernel libtirpc and rpcbind sent.
       retval: ^1$
+    nfs06_vall_ip4t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^137$
+      arch: ppc64le$
+      skip: 1
+    nfs06_v4x_ip6t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^(undefined|137)$
+      arch: ppc64le$
+      skip: 1
+    nfs10_v30_ip4t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^5$
+      arch: ppc64le$
+      skip: 1
+    nfs10_v40_ip4t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^7$
+      arch: ppc64le$
+      skip: 1
+    nfs10_v41_ip4t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^5$
+      arch: ppc64le$
+      skip: 1
+    nfs10_v42_ip4t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^(undefined|137)$
+      arch: ppc64le$
+      skip: 1
+    nfs10_v30_ip6t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^(undefined|137)$
+      arch: ppc64le$
+      skip: 1
+    nfs10_v40_ip6t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^(undefined|137)$
+      arch: ppc64le$
+      skip: 1
+    nfs10_v41_ip6t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^1$
+      arch: ppc64le$
+      skip: 1
+    nfs10_v42_ip6t:
+    - product: opensuse:Tumbleweed
+      message: fsstress causes continuous workqueue and soft lockups. bsc#1231797 bsc#1232779
+      retval: ^1$
+      arch: ppc64le$
+      skip: 1
 
 net.rpc_tests:
     rpc_clnt_broadcast:
