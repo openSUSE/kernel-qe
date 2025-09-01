@@ -1,1 +1,20 @@
 ---
+bpf:
+    SKB_XDP_METADATA_COPY:
+    - product: opensuse:Tumbleweed
+      message: Regression from new tail test. poo#188070
+    SKB_XDP_METADATA_COPY_MULTI_BUFF:
+    - product: opensuse:Tumbleweed
+      message: Regression from new tail test. poo#188070
+    SKB_XDP_ADJUST_TAIL_GROW:
+    - product: opensuse:Tumbleweed
+      message: New test. poo#188070
+    DRV_XDP_METADATA_COPY:
+    - product: opensuse:Tumbleweed
+      message: Regression from new tail test. poo#188070
+    DRV_XDP_METADATA_COPY_MULTI_BUFF:
+    - product: opensuse:Tumbleweed
+      message: Regression from new tail test. poo#188070
+    DRV_XDP_ADJUST_TAIL_GROW:
+    - product: opensuse:Tumbleweed
+      message: New test. poo#188070
