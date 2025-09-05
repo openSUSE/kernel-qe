@@ -162,6 +162,14 @@ syscalls:
       ltp_version: ltp-32bit
       bugzilla: 1230280
       message: Test file was not deleted between subtests (EEXIST) on bcachefs. Kernel bug. bsc#1230280
+    epoll_wait02:
+    - product: opensuse:Tumbleweed
+      arch: riscv64$
+      message: Test reported to be too resource hungry for riscv64 software emulation.
+    epoll_pwait03:
+    - product: opensuse:Tumbleweed
+      arch: riscv64$
+      message: Test reported to be too resource hungry for riscv64 software emulation.
     fanotify09:
     - product: opensuse:15\.5
       retval: ^1$
@@ -186,6 +194,10 @@ syscalls:
       retval: ^1$
       bugzilla: 1230149
       message: ioctl(LOOP_SET_BLOCK_SIZE) and ioctl(LOOP_CONFIGURE) accept blocksize larger than pagesize on PPC64LE. Kernel bug. bsc#1230149
+    prctl09:
+    - product: opensuse:Tumbleweed
+      arch: riscv64$
+      message: Test reported to be too resource hungry for riscv64 software emulation.
     statvfs01:
     - product: opensuse:Tumbleweed
       retval: ^1$
