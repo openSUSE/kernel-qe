@@ -147,3 +147,8 @@ bpf:
     test_bpffs:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. poo#188403
+
+    prog_tests_framework/test_fail_subtest:
+    - product: opensuse:Tumbleweed
+      message: This test is supposed to fail.
+      skip: 1
