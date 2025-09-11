@@ -177,3 +177,7 @@ bpf:
     cpumask:
     - product: opensuse:Tumbleweed
       message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
+
+    xdp_cpumap_attach:
+    - product: opensuse:Tumbleweed
+      message: Unstable test. poo#188406
