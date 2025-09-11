@@ -152,3 +152,7 @@ bpf:
     - product: opensuse:Tumbleweed
       message: This test is supposed to fail.
       skip: 1
+
+    btf_dump:
+    - product: opensuse:Tumbleweed
+      message: Likely LLVM 20 object creation bug. poo#188388
