@@ -160,3 +160,7 @@ bpf:
     ns_bpf_qdisc:
     - product: opensuse:Tumbleweed
       message: Virtualized SUT veth interface is limited to a single queue. poo#188397
+
+    bpf_qdisc_default:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT veth interface is limited to a single queue. poo#188394
