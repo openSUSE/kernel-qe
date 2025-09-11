@@ -156,3 +156,7 @@ bpf:
     btf_dump:
     - product: opensuse:Tumbleweed
       message: Likely LLVM 20 object creation bug. poo#188388
+
+    ns_bpf_qdisc:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT veth interface is limited to a single queue. poo#188397
