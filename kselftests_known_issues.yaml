@@ -164,3 +164,16 @@ bpf:
     bpf_qdisc_default:
     - product: opensuse:Tumbleweed
       message: Virtualized SUT veth interface is limited to a single queue. poo#188394
+
+    cpumask/test_firstand_nocpu:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
+    cpumask/test_and_or_xor:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
+    cpumask/test_intersects_subset:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
+    cpumask:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
