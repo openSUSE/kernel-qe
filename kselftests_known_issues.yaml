@@ -181,3 +181,10 @@ bpf:
     xdp_cpumap_attach:
     - product: opensuse:Tumbleweed
       message: Unstable test. poo#188406
+
+    bpf_iter/task_vma:
+    - product: opensuse:Tumbleweed
+      message: Virt. overlay makes inode number unreliable. poo#188382
+    bpf_iter:
+    - product: opensuse:Tumbleweed
+      message: Virt. overlay makes inode number unreliable. poo#188382
