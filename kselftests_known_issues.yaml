@@ -202,3 +202,10 @@ bpf:
     verify_pkcs7_sig:
     - product: opensuse:Tumbleweed
       message: Likely environment setup issue. poo#188751
+
+    htab_update/reenter_update:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188394
+    htab_update:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188394
