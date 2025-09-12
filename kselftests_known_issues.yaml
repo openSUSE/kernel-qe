@@ -192,3 +192,13 @@ bpf:
     xdp_flowtable:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. poo#188409
+
+    verify_pkcs7_sig/pkcs7_sig_from_map:
+    - product: opensuse:Tumbleweed
+      message: Likely environment setup issue. poo#188751
+    verify_pkcs7_sig/pkcs7_sig_fsverity:
+    - product: opensuse:Tumbleweed
+      message: Likely environment setup issue. poo#188751
+    verify_pkcs7_sig:
+    - product: opensuse:Tumbleweed
+      message: Likely environment setup issue. poo#188751
