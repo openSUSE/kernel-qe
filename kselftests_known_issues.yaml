@@ -24,9 +24,188 @@ bpf:
       message: Unstable test. poo#188073
 
     # test_progs
-    test_tcp_ca_kfunc/tcp_ca_kfunc__open_and_load:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. poo#188076
+
     bpf_tcp_ca/tcp_ca_kfunc:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. poo#188076
+    bpf_tcp_ca:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188076
+
+    bpf_cookie/lsm:
+    - product: opensuse:Tumbleweed
+      message: SELinux makes mprotect() return EACCES. poo#188139
+    bpf_cookie:
+    - product: opensuse:Tumbleweed
+      message: SELinux makes mprotect() return EACCES. poo#188139
+
+    iters/css_task:
+    - product: opensuse:Tumbleweed
+      message: SELinux makes mprotect() return EACCES. poo#188139
+    iters:
+    - product: opensuse:Tumbleweed
+      message: SELinux makes mprotect() return EACCES. poo#188139
+
+    test_lsm/lsm_basic:
+    - product: opensuse:Tumbleweed
+      message: SELinux makes mprotect() return EACCES. poo#188139
+    test_lsm:
+    - product: opensuse:Tumbleweed
+      message: SELinux makes mprotect() return EACCES. poo#188139
+
+    fs_kfuncs/security_selinux_xattr_error:
+    - product: opensuse:Tumbleweed
+      message: SELinux makes setxattr(f, "security.selinux", ...) return EINVAL. poo#188139
+    fs_kfuncs:
+    - product: opensuse:Tumbleweed
+      message: SELinux makes setxattr(f, "security.selinux", ...) return EINVAL. poo#188139
+
+    tunnel/vxlan_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/ip6vxlan_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/ipip_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/xfrm_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/gre_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/ip6gre_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/erspan_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/ip6erspan_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/geneve_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/ip6geneve_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel/ip6tnl_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+    tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188196
+
+    test_ima:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188244
+
+    kprobe_multi_test/attach_override:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188247
+    kprobe_multi_test:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188247
+
+    libbpf_probe_prog_types/BPF_PROG_TYPE_LIRC_MODE2:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188253
+    libbpf_probe_prog_types:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188253
+
+    token/obj_priv_map:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188313
+    token/obj_priv_prog:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188313
+    token/obj_priv_freplace_prog:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188313
+    token/obj_priv_freplace_prog_fail:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188313
+    token/obj_priv_btf_success:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188313
+    token/obj_priv_implicit_token:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188313
+    token/obj_priv_implicit_token_envvar:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188313
+    token:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188313
+
+    verif_scale_pyperf600:
+    - product: opensuse:Tumbleweed
+      message: Program fails verification in LLVM 20. poo#188379
+
+    test_bpffs:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188403
+
+    prog_tests_framework/test_fail_subtest:
+    - product: opensuse:Tumbleweed
+      message: This test is supposed to fail.
+      skip: 1
+
+    btf_dump:
+    - product: opensuse:Tumbleweed
+      message: Likely LLVM 20 object creation bug. poo#188388
+
+    ns_bpf_qdisc:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT veth interface is limited to a single queue. poo#188397
+
+    bpf_qdisc_default:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT veth interface is limited to a single queue. poo#188394
+
+    cpumask/test_firstand_nocpu:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
+    cpumask/test_and_or_xor:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
+    cpumask/test_intersects_subset:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
+    cpumask:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
+
+    xdp_cpumap_attach:
+    - product: opensuse:Tumbleweed
+      message: Unstable test. poo#188406
+
+    bpf_iter/task_vma:
+    - product: opensuse:Tumbleweed
+      message: Virt. overlay makes inode number unreliable. poo#188382
+    bpf_iter:
+    - product: opensuse:Tumbleweed
+      message: Virt. overlay makes inode number unreliable. poo#188382
+
+    xdp_flowtable:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188409
+
+    verify_pkcs7_sig/pkcs7_sig_from_map:
+    - product: opensuse:Tumbleweed
+      message: Likely environment setup issue. poo#188751
+    verify_pkcs7_sig/pkcs7_sig_fsverity:
+    - product: opensuse:Tumbleweed
+      message: Likely environment setup issue. poo#188751
+    verify_pkcs7_sig:
+    - product: opensuse:Tumbleweed
+      message: Likely environment setup issue. poo#188751
+
+    htab_update/reenter_update:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188394
+    htab_update:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188394
