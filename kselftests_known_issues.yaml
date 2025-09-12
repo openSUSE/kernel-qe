@@ -188,3 +188,7 @@ bpf:
     bpf_iter:
     - product: opensuse:Tumbleweed
       message: Virt. overlay makes inode number unreliable. poo#188382
+
+    xdp_flowtable:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. poo#188409
