@@ -229,3 +229,7 @@ bpf:
     bpf_iter:
     - product: opensuse:Tumbleweed
       message: VMA comparison failure. bsc#1252361
+
+    livepatch_trampoline:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_SAMPLE_LIVEPATCH=m.
