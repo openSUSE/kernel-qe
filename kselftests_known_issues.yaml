@@ -233,3 +233,8 @@ bpf:
     livepatch_trampoline:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_SAMPLE_LIVEPATCH=m.
+
+    test_tag:
+    - product: opensuse:Tumbleweed
+      kernel: 6\.18
+      message: 'Test is broken, fixed in commit b7f7d76d6e35 ("selftests/bpf: Update test_tag to use sha256") at v6.19-rc1'
