@@ -1,9 +1,10 @@
 ---
 ima:
-    ima_conditionals:
+    ima_violations:
     - product: opensuse:Tumbleweed
-      retval: ^2$
-      message: User nobody can't be used with sudo. Bug in test or Tumbleweed setup. poo#188250
+      retval: ^1$
+      message: open_writers violation not added. Bug in test or Tumbleweed setup. poo#183764
+      keep_fail: 1
 
 kernel_misc:
     tpci:
