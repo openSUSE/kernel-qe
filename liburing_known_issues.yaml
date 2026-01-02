@@ -11,13 +11,17 @@ liburing:
       arch: ppc64le$
       skip: 1
       message: Times out on POWER with large registered vectors.
-  poll-race-mshot.t:
-    - product: opensuse:Tumbleweed$
-      skip: 1
-      message: Change in the kernel behaviour. Test adapted but in the latest version only.
   epwait.t:
     - product: opensuse:Tumbleweed$
       arch: ^(aarch64|ppc64le)$
       ltp_version: ^liburing-(1\..*|2\.(0|[1-9]|1[0-2]))$
       skip: 1
       message: Upstream test issue fixed in bsc#1251957. Fix present in liburing-2.13+
+  min-timeout.t:
+    - product: opensuse:Tumbleweed$
+      skip: 1
+      message: upstream kernel bug. https://github.com/axboe/liburing/issues/1477
+  min-timeout-wait.t:
+    - product: opensuse:Tumbleweed$
+      skip: 1
+      message: upstream kernel bug. https://github.com/axboe/liburing/issues/1477
