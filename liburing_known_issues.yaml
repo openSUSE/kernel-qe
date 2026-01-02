@@ -17,3 +17,11 @@ liburing:
       ltp_version: ^liburing-(1\..*|2\.(0|[1-9]|1[0-2]))$
       skip: 1
       message: Upstream test issue fixed in bsc#1251957. Fix present in liburing-2.13+
+  min-timeout.t:
+    - product: opensuse:Tumbleweed$
+      skip: 1
+      message: upstream kernel bug. https://github.com/axboe/liburing/issues/1477
+  min-timeout-wait.t:
+    - product: opensuse:Tumbleweed$
+      skip: 1
+      message: upstream kernel bug. https://github.com/axboe/liburing/issues/1477
