@@ -11,10 +11,6 @@ liburing:
       arch: ppc64le$
       skip: 1
       message: Times out on POWER with large registered vectors.
-  poll-race-mshot.t:
-    - product: opensuse:Tumbleweed$
-      skip: 1
-      message: Change in the kernel behaviour. Test adapted but in the latest version only.
   epwait.t:
     - product: opensuse:Tumbleweed$
       arch: ^(aarch64|ppc64le)$
