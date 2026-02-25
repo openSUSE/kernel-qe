@@ -11,6 +11,14 @@ bpf:
     - product: opensuse:Tumbleweed
       message: Unstable test. poo#188073
 
+    test_lirc_mode2_sh:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y
+
+    test_xdp_features_sh:
+    - product: opensuse:Tumbleweed
+      message: Test passes locally but fails in openQA, therefore there is a missing setting in the SUT.
+
     # test_progs
 
     prog_tests_framework/test_fail_subtest:
@@ -233,3 +241,32 @@ bpf:
     livepatch_trampoline:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_SAMPLE_LIVEPATCH=m.
+
+    tc_tunnel/gre_mpls:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
+    tc_tunnel/ip6gre_mpls:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
+    tc_tunnel/udp_none:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
+    tc_tunnel/udp_mpls:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
+    tc_tunnel/ip6udp_none:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
+    tc_tunnel:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
+
+net:
+    test_bpf_sh:
+    - product: opensuse:Tumbleweed
+      message: >
+        Configuration mismatch. Test requires CONFIG_TEST_BPF=m.
+
+    so_incoming_cpu:
+    - product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2.
