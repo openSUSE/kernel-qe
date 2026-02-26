@@ -1,5 +1,13 @@
 ---
 bpf:
+    test_lirc_mode2_sh:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y
+
+    test_xdp_features_sh:
+    - product: opensuse:Tumbleweed
+      message: Test passes locally but fails in openQA, therefore there is a missing setting in the SUT.
+
     # test_xsk.sh
     SKB_XDP_ADJUST_TAIL_GROW:
     - product: opensuse:Tumbleweed
@@ -10,14 +18,6 @@ bpf:
     DRV_XDP_DROP_HALF:
     - product: opensuse:Tumbleweed
       message: Unstable test. poo#188073
-
-    test_lirc_mode2_sh:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y
-
-    test_xdp_features_sh:
-    - product: opensuse:Tumbleweed
-      message: Test passes locally but fails in openQA, therefore there is a missing setting in the SUT.
 
     # test_progs
 
@@ -267,6 +267,7 @@ net:
       message: >
         Configuration mismatch. Test requires CONFIG_TEST_BPF=m.
 
-    so_incoming_cpu:
-    - product: opensuse:Tumbleweed
+    '*':
+    - test: ^so_incoming_cpu
+      product: opensuse:Tumbleweed
       message: Virtualized SUT has a single vCPU, test requires 2.
