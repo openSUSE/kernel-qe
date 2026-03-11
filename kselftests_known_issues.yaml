@@ -271,3 +271,19 @@ net:
     - test: ^so_incoming_cpu
       product: opensuse:Tumbleweed
       message: Virtualized SUT has a single vCPU, test requires 2.
+
+    fib_rule_tests_sh:
+    - product: opensuse:Tumbleweed
+      message: Environment setup problem. Issue not reproducible under strict selftests environment.
+
+    pmtu_sh:
+    - product: opensuse:Tumbleweed
+      message: Environment setup problem. Issue not reproducible under strict selftests environment.
+
+    rtnetlink_sh:
+    - product: opensuse:Tumbleweed
+      message: Environment setup problem. Issue not reproducible under strict selftests environment.
+
+    test_ingress_egress_chaining_sh:
+    - product: opensuse:Tumbleweed
+      message: Environment setup problem. Issue not reproducible under strict selftests environment.
