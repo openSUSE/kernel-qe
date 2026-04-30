@@ -1,0 +1,44 @@
+# QE-maintained knowledge base for xfstests failure analysis
+#
+# This file is maintained by QE engineers to supplement and override the
+# AI-generated knowledge base (ai_knowledge_base.yaml).
+#
+# Merge rules (QE entries have higher priority):
+#   - Scalar fields (description, bug_probability, classification):
+#     QE value overrides AI value
+#   - List fields (common_causes, investigation_steps, output_patterns):
+#     QE entries are shown first, followed by AI entries
+#   - Tests only in this file work standalone without AI KB
+#
+# Structure per test:
+#
+#   <category>/<number>:
+#     description: <what the test does>
+#     subsystem: <filesystem subsystem>
+#     test_type: <test group tags>
+#     failure_analysis:
+#       bug_probability: high|medium|low
+#       classification: kernel_bug|tool_version_mismatch|test_bug|config_problem|test_environment_issue|race_condition
+#       common_causes:
+#         - <specific cause>
+#       investigation_steps:
+#         - <specific step>
+#       platform_factors:
+#         s390x:
+#           bug_probability: <adjusted>
+#           note: <why this platform differs>
+#           extra_causes:
+#             - <platform-specific cause>
+#           extra_steps:
+#             - <platform-specific step>
+#     output_patterns:
+#       - pattern: <string or regex to match in test output or full.log>
+#         meaning: <what this pattern indicates>
+#         bug_probability: high|medium|low
+#         classification: <classification when this pattern matches>
+#
+# You do not need to fill in every field - only add what you know.
+# Partial entries are merged with the AI knowledge base.
+---
+version: '1.0'
+tests: {}
