@@ -34,6 +34,10 @@ net.features:
       message: Netstress timeout on ppc64le and s390x. Kernel bug. Fix in progress. bsc#1221728
 
 net.nfs:
+    '*':
+    - test: ^.*_v40_.*$
+      skip: 1
+      message: NFSv4.0 is no longer supported on nfs-utils >= 2.9.1 and kernel >= 7.0
     nfs10_v30_ip4t:
     - product: opensuse:Tumbleweed
       message: fsstress causes continuous workqueue and soft lockups. bsc#1237069
