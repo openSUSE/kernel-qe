@@ -43,11 +43,6 @@ net.nfs:
       message: fsstress causes continuous workqueue and soft lockups. bsc#1237069
       skip: 1
       arch: ppc64le$
-    nfs10_v40_ip4t:
-    - product: opensuse:Tumbleweed
-      message: fsstress causes continuous workqueue and soft lockups. bsc#1237069
-      skip: 1
-      arch: ppc64le$
     nfs10_v41_ip4t:
     - product: opensuse:Tumbleweed
       message: fsstress causes continuous workqueue and soft lockups. bsc#1237069
@@ -59,11 +54,6 @@ net.nfs:
       skip: 1
       arch: ppc64le$
     nfs10_v30_ip6t:
-    - product: opensuse:Tumbleweed
-      message: fsstress causes continuous workqueue and soft lockups. bsc#1237069
-      skip: 1
-      arch: ppc64le$
-    nfs10_v40_ip6t:
     - product: opensuse:Tumbleweed
       message: fsstress causes continuous workqueue and soft lockups. bsc#1237069
       skip: 1
