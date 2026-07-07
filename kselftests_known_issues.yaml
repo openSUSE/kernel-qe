@@ -287,3 +287,11 @@ net:
     test_ingress_egress_chaining_sh:
     - product: opensuse:Tumbleweed
       message: Environment setup problem. Issue not reproducible under strict selftests environment.
+
+net/mptcp:
+    simult_flows_sh:
+    - product: opensuse:Tumbleweed
+      message: >
+        Unstable test.
+        https://github.com/multipath-tcp/mptcp_net-next/issues/475
+        https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=cc73a6577ae64247898269d138dee6b73ff710cc
