@@ -125,6 +125,13 @@ bpf:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_NF_FLOW_TABLE=y. poo#188409
 
+    bpf_smc/topo:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_DIBS_LO=y.
+    bpf_smc:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_DIBS_LO=y.
+
     htab_update/reenter_update:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_FORTIFY_SOURCE=n. poo#188394
