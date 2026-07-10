@@ -112,34 +112,6 @@ bpf:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_RANDOM_KMALLOC_CACHES=n. poo#188769
 
-    bpf_cookie/lsm:
-    - product: opensuse:Tumbleweed
-      message: SELinux makes mprotect() return EACCES. poo#188139
-    bpf_cookie:
-    - product: opensuse:Tumbleweed
-      message: SELinux makes mprotect() return EACCES. poo#188139
-
-    iters/css_task:
-    - product: opensuse:Tumbleweed
-      message: SELinux makes mprotect() return EACCES. poo#188139
-    iters:
-    - product: opensuse:Tumbleweed
-      message: SELinux makes mprotect() return EACCES. poo#188139
-
-    test_lsm/lsm_basic:
-    - product: opensuse:Tumbleweed
-      message: SELinux makes mprotect() return EACCES. poo#188139
-    test_lsm:
-    - product: opensuse:Tumbleweed
-      message: SELinux makes mprotect() return EACCES. poo#188139
-
-    fs_kfuncs/security_selinux_xattr_error:
-    - product: opensuse:Tumbleweed
-      message: SELinux makes setxattr(f, "security.selinux", ...) return EINVAL. poo#188139
-    fs_kfuncs:
-    - product: opensuse:Tumbleweed
-      message: SELinux makes setxattr(f, "security.selinux", ...) return EINVAL. poo#188139
-
     ns_bpf_qdisc:
     - product: opensuse:Tumbleweed
       message: Virtualized SUT veth interface is limited to a single queue. poo#188397
