@@ -33,48 +33,14 @@ bpf:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_TCP_CONG_BBR=y. poo#188076
 
-    tunnel/vxlan_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/ip6vxlan_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/ipip_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/xfrm_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/gre_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/ip6gre_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/erspan_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/ip6erspan_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/geneve_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/ip6geneve_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel/ip6tnl_tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-    tunnel:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
-
     test_ima:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_IMA_WRITE_POLICY=y. poo#188244
 
     kprobe_multi_test/attach_override:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_BPF_KPROBE_OVERRIDE=y. poo#188247
+    kprobe_multi_test/override:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_BPF_KPROBE_OVERRIDE=y. poo#188247
     kprobe_multi_test:
@@ -109,6 +75,9 @@ bpf:
     token/obj_priv_implicit_token_envvar:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
+    token/obj_priv_prog_kallsyms:
+    - product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
     token:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
@@ -124,13 +93,6 @@ bpf:
     xdp_flowtable:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_NF_FLOW_TABLE=y. poo#188409
-
-    bpf_smc/topo:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_DIBS_LO=y.
-    bpf_smc:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_DIBS_LO=y.
 
     htab_update/reenter_update:
     - product: opensuse:Tumbleweed
@@ -203,37 +165,6 @@ bpf:
     - product: opensuse:Tumbleweed
       message: Unstable test. poo#188406
 
-    xdp_bonding/xdp_bonding_attach:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding/xdp_bonding_nested:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding/xdp_bonding_features:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding/xdp_bonding_roundrobin:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding/xdp_bonding_activebackup:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding/xdp_bonding_xor_layer2:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding/xdp_bonding_xor_layer23:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding/xdp_bonding_xor_layer34:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding/xdp_bonding_redirect_multi:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-    xdp_bonding:
-    - product: opensuse:Tumbleweed
-      message: Unstable test. poo#189192
-
     verif_scale_pyperf600:
     - product: opensuse:Tumbleweed
       message: Program fails to load (too many jumps). bsc#1252367
@@ -267,6 +198,17 @@ bpf:
     tc_tunnel:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
+
+    '*':
+    - test: ^tunnel(/|$)
+      product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_NET_FOU=y. poo#188196
+    - test: ^bpf_smc(/|$)
+      product: opensuse:Tumbleweed
+      message: Configuration mismatch. Test requires CONFIG_DIBS_LO=y.
+    - test: ^xdp_bonding(/|$)
+      product: opensuse:Tumbleweed
+      message: Unstable test. poo#189192
 
 net:
     test_bpf_sh:
