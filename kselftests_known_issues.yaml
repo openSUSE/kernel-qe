@@ -210,8 +210,9 @@ net:
       message: Environment setup problem. Issue not reproducible under strict selftests environment.
 
 net/mptcp:
-    simult_flows_sh:
-    - product: opensuse:Tumbleweed
+    '*':
+    - test: '^- simult_flows:'
+      product: opensuse:Tumbleweed
       message: >
         Unstable test.
         https://github.com/multipath-tcp/mptcp_net-next/issues/475
