@@ -188,11 +188,6 @@ net:
       message: >
         Configuration mismatch. Test requires CONFIG_TEST_BPF=m.
 
-    '*':
-    - test: ^so_incoming_cpu
-      product: opensuse:Tumbleweed
-      message: Virtualized SUT has a single vCPU, test requires 2.
-
     fib_rule_tests_sh:
     - product: opensuse:Tumbleweed
       message: Environment setup problem. Issue not reproducible under strict selftests environment.
@@ -208,6 +203,14 @@ net:
     test_ingress_egress_chaining_sh:
     - product: opensuse:Tumbleweed
       message: Environment setup problem. Issue not reproducible under strict selftests environment.
+
+    '*':
+    - test: ^so_incoming_cpu
+      product: opensuse:Tumbleweed
+      message: Virtualized SUT has a single vCPU, test requires 2.
+    - test: ^tun_vnet_udptnl\..*\.(send|recv)_gso_packet$
+      product: opensuse:Tumbleweed
+      message: Unstable test. poo#202386
 
 net/mptcp:
     '*':
