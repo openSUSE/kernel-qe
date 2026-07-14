@@ -101,13 +101,6 @@ bpf:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_FORTIFY_SOURCE=n. poo#188394
 
-    perf_branches/perf_branches_no_hw:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_RANDOM_KMALLOC_CACHES=n. poo#188766
-    perf_branches:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_RANDOM_KMALLOC_CACHES=n. poo#188766
-
     verifier_private_stack:
     - product: opensuse:Tumbleweed
       message: Configuration mismatch. Test requires CONFIG_RANDOM_KMALLOC_CACHES=n. poo#188769
