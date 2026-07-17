@@ -124,14 +124,6 @@ syscalls:
     - product: opensuse:Tumbleweed
       arch: riscv64$
       message: Test reported to be too resource hungry for riscv64 software emulation. Maybe related to bsc#1236868
-    ustat01:
-    - product: opensuse:(Tumbleweed|15\.[4-6])
-      retval: ^1$
-      message: ustat() is known to fail with EINVAL on Btrfs. Downstream fixes didn't make it to upstream and were removed. bsc#1194208
-    ustat02:
-    - product: opensuse:(Tumbleweed|15\.[4-6])
-      retval: ^1$
-      message: ustat() is known to fail with EINVAL on Btrfs. Downstream fixes didn't make it to upstream and were removed. bsc#1194208
 
 tracing:
     ftrace-stress-test:
