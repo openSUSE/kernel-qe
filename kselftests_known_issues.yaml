@@ -204,6 +204,9 @@ net:
     - test: ^tun_vnet_udptnl\..*\.(send|recv)_gso_packet$
       product: opensuse:Tumbleweed
       message: Unstable test. poo#202386
+    - test: ^bind_wildcard\.
+      product: opensuse:Tumbleweed
+      message: Flaky test - ephemeral port race
 
 net/mptcp:
     '*':
