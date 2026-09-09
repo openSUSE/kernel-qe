@@ -124,6 +124,21 @@ syscalls:
     - product: opensuse:Tumbleweed
       arch: riscv64$
       message: Test reported to be too resource hungry for riscv64 software emulation. Maybe related to bsc#1236868
+    swapoff01:
+    - product: opensuse:Tumbleweed
+      message: known issue with swap on exfat. https://lore.kernel.org/lkml/CAKYAXd_nGWA1UUP3TpVzpB6QpiFkXLMX6au86Agr_haBinwwdA@mail.gmail.com/
+    swapoff02:
+    - product: opensuse:Tumbleweed
+      message: known issue with swap on exfat. https://lore.kernel.org/lkml/CAKYAXd_nGWA1UUP3TpVzpB6QpiFkXLMX6au86Agr_haBinwwdA@mail.gmail.com/
+    swapon01:
+    - product: opensuse:Tumbleweed
+      message: known issue with swap on exfat. https://lore.kernel.org/lkml/CAKYAXd_nGWA1UUP3TpVzpB6QpiFkXLMX6au86Agr_haBinwwdA@mail.gmail.com/
+    swapon02:
+    - product: opensuse:Tumbleweed
+      message: known issue with swap on exfat. https://lore.kernel.org/lkml/CAKYAXd_nGWA1UUP3TpVzpB6QpiFkXLMX6au86Agr_haBinwwdA@mail.gmail.com/
+    swapon03:
+    - product: opensuse:Tumbleweed
+      message: known issue with swap on exfat. https://lore.kernel.org/lkml/CAKYAXd_nGWA1UUP3TpVzpB6QpiFkXLMX6au86Agr_haBinwwdA@mail.gmail.com/
 
 tracing:
     ftrace-stress-test:
