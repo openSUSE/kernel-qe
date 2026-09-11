@@ -17,3 +17,8 @@ liburing:
       ltp_version: ^liburing-(1\..*|2\.(0|[1-9]|1[0-2]))$
       skip: 1
       message: Upstream test issue fixed in bsc#1251957. Fix present in liburing-2.13+
+  zcrx.t:
+    - product: opensuse:Tumbleweed$
+      ltp_version: ^liburing-2\.15$
+      skip: 1
+      message: Skip zcrx.t on Tumbleweed with liburing-2.15 on all architectures. The test tries to map memory with addr=NULL and MAP_FIXED, which forces mapping at address 0 and fails with permission denied on systems running SELinux.
