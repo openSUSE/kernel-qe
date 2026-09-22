@@ -5,15 +5,3 @@ blktests:
   - product: opensuse:Tumbleweed
     skip: 1
     message: Unstable, makes udev too busy. poo#204738
-  nvme/033:
-  - product: opensuse:Tumbleweed
-    skip: 1
-    message: nvme-cli 3.x deprecated command warnings break output parsing. poo#206997
-  nvme/054:
-  - product: opensuse:Tumbleweed
-    skip: 1
-    message: ECN132 renamed regctl to regstrnt, breaking output parsing. poo#206997
-  nvme/059:
-  - product: opensuse:Tumbleweed
-    skip: 1
-    message: nvme-cli 3.x deprecated command warnings break output parsing. poo#206997
