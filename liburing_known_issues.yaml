@@ -27,3 +27,7 @@ liburing:
       arch: ^(aarch64|ppc64le|s390x)$
       skip: 1
       message: Test is not proper for slow arch and it relies on hardcoded sleep.
+  iowait.t:
+    - product: opensuse:Tumbleweed$
+      skip: 1
+      message: Per-CPU iowait statistics is fundamentally unreliable on SMP systems.
