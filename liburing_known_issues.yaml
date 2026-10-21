@@ -22,3 +22,7 @@ liburing:
       ltp_version: ^liburing-2\.15$
       skip: 1
       message: Skip zcrx.t on Tumbleweed with liburing-2.15 on all architectures. The test tries to map memory with addr=NULL and MAP_FIXED, which forces mapping at address 0 and fails with permission denied on systems running SELinux.
+  iowait.t:
+    - product: opensuse:Tumbleweed$
+      skip: 1
+      message: Per-CPU iowait statistics is fundamentally unreliable on SMP systems. poo#208251
