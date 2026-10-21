@@ -22,8 +22,3 @@ liburing:
       ltp_version: ^liburing-2\.15$
       skip: 1
       message: Skip zcrx.t on Tumbleweed with liburing-2.15 on all architectures. The test tries to map memory with addr=NULL and MAP_FIXED, which forces mapping at address 0 and fails with permission denied on systems running SELinux.
-  multicqes_drain.t:
-    - product: opensuse:Tumbleweed$
-      arch: ^(aarch64|ppc64le|s390x)$
-      skip: 1
-      message: Test is not proper for slow arch and it relies on hardcoded sleep.
