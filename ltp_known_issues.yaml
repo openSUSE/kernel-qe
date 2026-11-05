@@ -120,6 +120,10 @@ syscalls:
     - product: opensuse:Tumbleweed
       arch: ^(aarch64|riscv64)$
       message: epoll_pwait() oversleeps by a random amount. bsc#1236868
+    fanotify26:
+    - product: opensuse:Tumbleweed
+      message: Upstream bug WIP. poo#209841
+      retval: ^1$
     inotify13:
     - product: opensuse:Tumbleweed
       message: Upstream bug WIP. poo#209841
