@@ -26,3 +26,8 @@ liburing:
     - product: opensuse:Tumbleweed$
       skip: 1
       message: Per-CPU iowait statistics is fundamentally unreliable on SMP systems. poo#208251
+  waitid.t:
+    - product: opensuse:Tumbleweed$
+      ltp_version: ^liburing-2\.15$
+      skip: 1
+      message: In liburing-2.15, the waitid test (waitid.t) fails on newer kernels because the kernel now returns -ETIME (-62) instead of 1 when a linked timeout expires, whereas the older test case still expects 1. This has been fixed in upstream liburing commit 5ff7510.
