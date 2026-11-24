@@ -105,6 +105,9 @@ bpf:
         - test: ^xdp_bonding(/|$)
           product: opensuse:Tumbleweed
           message: Unstable test. poo#189192
+        - test: ^libarena(_asan)?(/|$)
+          product: opensuse:Tumbleweed
+          message: Configuration mismatch. Arena spinlock requires CONFIG_NR_CPUS<=1024
 
 net:
     test_bpf_sh:
