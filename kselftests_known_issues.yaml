@@ -45,6 +45,10 @@ bpf:
         - product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y. poo#188253
 
+        lirc_mode2:
+        - product: opensuse:Tumbleweed
+          message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y.
+
         token/obj_priv_btf_success:
         - product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
