@@ -99,6 +99,9 @@ bpf:
         - test: ^bpf_smc(/|$)
           product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_DIBS_LO=y.
+        - test: ^bpf_nf(/|$)
+          product: opensuse:Tumbleweed
+          message: Configuration mismatch. Test requires CONFIG_NF_CONNTRACK=y.
         - test: ^xdp_bonding(/|$)
           product: opensuse:Tumbleweed
           message: Unstable test. poo#189192
