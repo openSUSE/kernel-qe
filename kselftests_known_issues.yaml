@@ -49,6 +49,20 @@ bpf:
         - product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y.
 
+        wakeup_source/iterate_and_verify_times:
+        - product: opensuse:Tumbleweed
+          message: Configuration mismatch. Test requires CONFIG_PM_WAKELOCKS=y.
+        wakeup_source:
+        - product: opensuse:Tumbleweed
+          message: Configuration mismatch. Test requires CONFIG_PM_WAKELOCKS=y.
+
+        xdp_context_lwt_encap/ioam6_encap:
+        - product: opensuse:Tumbleweed
+          message: Configuration mismatch. Test requires CONFIG_IPV6_IOAM6_LWTUNNEL=y.
+        xdp_context_lwt_encap:
+        - product: opensuse:Tumbleweed
+          message: Configuration mismatch. Test requires CONFIG_IPV6_IOAM6_LWTUNNEL=y.
+
         token/obj_priv_btf_success:
         - product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
