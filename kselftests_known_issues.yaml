@@ -1,20 +1,5 @@
 ---
 bpf:
-    test_lirc_mode2_sh:
-    - product: opensuse:Tumbleweed
-      message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y
-
-    test_xsk_sh:
-        SKB_XDP_ADJUST_TAIL_GROW:
-        - product: opensuse:Tumbleweed
-          message: New test. poo#188070
-        DRV_XDP_ADJUST_TAIL_GROW:
-        - product: opensuse:Tumbleweed
-          message: New test. poo#188070
-        DRV_XDP_DROP_HALF:
-        - product: opensuse:Tumbleweed
-          message: Unstable test. poo#188073
-
     test_progs:
         prog_tests_framework/test_fail_subtest:
         - product: opensuse:Tumbleweed
@@ -49,25 +34,28 @@ bpf:
         - product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y. poo#188253
 
-        token/obj_priv_map:
+        lirc_mode2:
         - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
-        token/obj_priv_prog:
+          message: Configuration mismatch. Test requires CONFIG_BPF_LIRC_MODE2=y.
+
+        wakeup_source/iterate_and_verify_times:
         - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
-        token/obj_priv_freplace_prog:
+          message: Configuration mismatch. Test requires CONFIG_PM_WAKELOCKS=y.
+        wakeup_source:
         - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
-        token/obj_priv_freplace_prog_fail:
+          message: Configuration mismatch. Test requires CONFIG_PM_WAKELOCKS=y.
+
+        xdp_context_lwt_encap/ioam6_encap:
         - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
+          message: Configuration mismatch. Test requires CONFIG_IPV6_IOAM6_LWTUNNEL=y.
+        xdp_context_lwt_encap:
+        - product: opensuse:Tumbleweed
+          message: Configuration mismatch. Test requires CONFIG_IPV6_IOAM6_LWTUNNEL=y.
+
         token/obj_priv_btf_success:
         - product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
         token/obj_priv_implicit_token:
-        - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
-        token/obj_priv_implicit_token_envvar:
         - product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_BPF_UNPRIV_DEFAULT_OFF=n. poo#188313
         token/obj_priv_prog_kallsyms:
@@ -81,53 +69,9 @@ bpf:
         - product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_BPF_PRELOAD=y. poo#188403
 
-        btf_dump:
-        - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_DEBUG_FORCE_WEAK_PER_CPU=n. poo#188388
-
-        xdp_flowtable:
-        - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_NF_FLOW_TABLE=y. poo#188409
-
-        htab_update/reenter_update:
-        - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_FORTIFY_SOURCE=n. poo#188394
-        htab_update:
-        - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_FORTIFY_SOURCE=n. poo#188394
-
-        verifier_private_stack:
-        - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_RANDOM_KMALLOC_CACHES=n. poo#188769
-
-        ns_bpf_qdisc:
-        - product: opensuse:Tumbleweed
-          message: Virtualized SUT veth interface is limited to a single queue. poo#188397
-
-        bpf_qdisc_default:
-        - product: opensuse:Tumbleweed
-          message: Virtualized SUT veth interface is limited to a single queue. poo#188394
-
-        cpumask/test_firstand_nocpu:
-        - product: opensuse:Tumbleweed
-          message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
-        cpumask/test_and_or_xor:
-        - product: opensuse:Tumbleweed
-          message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
-        cpumask/test_intersects_subset:
-        - product: opensuse:Tumbleweed
-          message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
-        cpumask:
-        - product: opensuse:Tumbleweed
-          message: Virtualized SUT has a single vCPU, test requires 2. poo#188391
-
         xdp_cpumap_attach:
         - product: opensuse:Tumbleweed
           message: Unstable test. poo#188406
-
-        verif_scale_pyperf600:
-        - product: opensuse:Tumbleweed
-          message: Program fails to load (too many jumps). bsc#1252367
 
         bpf_iter/task_vma:
         - product: opensuse:Tumbleweed
@@ -135,10 +79,6 @@ bpf:
         bpf_iter:
         - product: opensuse:Tumbleweed
           message: VMA comparison failure. bsc#1252361
-
-        livepatch_trampoline:
-        - product: opensuse:Tumbleweed
-          message: Configuration mismatch. Test requires CONFIG_SAMPLE_LIVEPATCH=m.
 
         tc_tunnel/gre_mpls:
         - product: opensuse:Tumbleweed
@@ -166,33 +106,22 @@ bpf:
         - test: ^bpf_smc(/|$)
           product: opensuse:Tumbleweed
           message: Configuration mismatch. Test requires CONFIG_DIBS_LO=y.
+        - test: ^bpf_nf(/|$)
+          product: opensuse:Tumbleweed
+          message: Configuration mismatch. Test requires CONFIG_NF_CONNTRACK=y.
         - test: ^xdp_bonding(/|$)
           product: opensuse:Tumbleweed
           message: Unstable test. poo#189192
+        - test: ^libarena(_asan)?(/|$)
+          product: opensuse:Tumbleweed
+          message: Configuration mismatch. Arena spinlock requires CONFIG_NR_CPUS<=1024
 
 net:
-    test_bpf_sh:
-    - product: opensuse:Tumbleweed
-      message: >
-        Configuration mismatch. Test requires CONFIG_TEST_BPF=m.
-
-    icmp_sh:
-    - product: opensuse:Tumbleweed
-      message: Flaky test - race between ping and tcpdump startup
-
-    so_incoming_cpu:
-    - product: opensuse:Tumbleweed
-      message: Virtualized SUT has a single vCPU, test requires 2.
-
     tun:
       '*':
       - test: '^tun_vnet_udptnl\..*\.(send|recv)_gso_packet$'
         product: opensuse:Tumbleweed
         message: Unstable test. poo#202386
-
-    bind_wildcard:
-    - product: opensuse:Tumbleweed
-      message: Flaky test - ephemeral port race
 
 net/mptcp:
     simult_flows_sh:
