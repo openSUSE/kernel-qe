@@ -128,28 +128,11 @@ bpf:
           message: Configuration mismatch. Arena spinlock requires CONFIG_NR_CPUS<=1024
 
 net:
-    test_bpf_sh:
-    - product: opensuse:Tumbleweed
-      message: >
-        Configuration mismatch. Test requires CONFIG_TEST_BPF=m.
-
-    icmp_sh:
-    - product: opensuse:Tumbleweed
-      message: Flaky test - race between ping and tcpdump startup
-
-    so_incoming_cpu:
-    - product: opensuse:Tumbleweed
-      message: Virtualized SUT has a single vCPU, test requires 2.
-
     tun:
       '*':
       - test: '^tun_vnet_udptnl\..*\.(send|recv)_gso_packet$'
         product: opensuse:Tumbleweed
         message: Unstable test. poo#202386
-
-    bind_wildcard:
-    - product: opensuse:Tumbleweed
-      message: Flaky test - ephemeral port race
 
 net/mptcp:
     simult_flows_sh:
