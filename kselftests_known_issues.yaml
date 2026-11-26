@@ -1,16 +1,5 @@
 ---
 bpf:
-    test_xsk_sh:
-        SKB_XDP_ADJUST_TAIL_GROW:
-        - product: opensuse:Tumbleweed
-          message: New test. poo#188070
-        DRV_XDP_ADJUST_TAIL_GROW:
-        - product: opensuse:Tumbleweed
-          message: New test. poo#188070
-        DRV_XDP_DROP_HALF:
-        - product: opensuse:Tumbleweed
-          message: Unstable test. poo#188073
-
     test_progs:
         prog_tests_framework/test_fail_subtest:
         - product: opensuse:Tumbleweed
